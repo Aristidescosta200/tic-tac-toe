@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-background: #ffffff;
+    --color-text: #000000;
+}
+
+* {
+    @apply outline-1 -outline-offset-2
+}
+
+
+html[dark] {
+    --color-background: #000000;
+    --color-text: #ffffff;
+}
+
+a {
+    @apply hover:underline active:opacity-50 transition-opacity;
+}
+
+html,
+body {
+    overflow: overlay;
+    @apply bg-background text-text w-screen h-screen underline-offset-8
+}
