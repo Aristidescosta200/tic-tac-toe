@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
-import { SplashScreen, OnboardingScreen, SignIn } from "@screens/index";
+import { SplashScreen, OnboardingScreen, SignIn, Home } from "@screens/index";
 
 export default function RoutesConfig() {
   const router = createBrowserRouter([
@@ -16,6 +16,11 @@ export default function RoutesConfig() {
     {
       path: "/sign-in",
       element: <SignIn />,
+      errorElement: <h1>Deu um erro inesperado.</h1>,
+    },
+    {
+      path: "/home",
+      element: <Home />,
       errorElement: <h1>Deu um erro inesperado.</h1>,
     },
   ]);

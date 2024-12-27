@@ -3,28 +3,31 @@
 @tailwind utilities;
 
 :root {
-    --color-background: #ffffff;
-    --color-text: #000000;
-    --color-primary: #46A3FF;
-    --color-neutral: #E3E3E3;
+  --color-background: #ffffff;
+  --color-text: #000000;
+  --color-primary: #46a3ff;
+  --color-neutral: #e3e3e3;
+  --color-darkText: #adadad;
+  --color-success: #00c096;
+  --color-error: #ff827e;
+  --color-yellow: #ffb048;
 }
 
 * {
-    @apply outline-1 -outline-offset-2
+  @apply outline-1 -outline-offset-2;
 }
 
-
 html[dark] {
-    --color-background: #000000;
-    --color-text: #ffffff;
+  --color-background: #000000;
+  --color-text: #ffffff;
 }
 
 a {
-    @apply hover:underline active:opacity-50 transition-opacity;
+  @apply hover:underline active:opacity-50 transition-opacity;
 }
 
 html,
 body {
-    overflow: overlay;
-    @apply bg-background text-text w-screen h-screen underline-offset-8
+  overflow: overlay;
+  @apply bg-background text-text w-screen h-screen underline-offset-8;
 }

@@ -1,1 +1,2 @@
-export * from "./Steps"
+export * from "./GameHistory";
+export * from "./Steps";
