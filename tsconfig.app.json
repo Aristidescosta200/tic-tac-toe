@@ -27,6 +27,7 @@
       "@styles/*": ["./app/src/styles/*"],
       "@components/*": ["./app/src/components/*"],
       "@pages/*": ["./app/src/pages/*"],
+      "@screens/*": ["./app/src/screens/*"],
       "@hooks/*": ["./app/src/hooks/*"],
       "@database/*": ["./app/src/database/*"],
       "@types/*": ["./app/src/types/*"],
