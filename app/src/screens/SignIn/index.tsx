@@ -30,7 +30,7 @@ const IconButton = ({ title, image }: IIconButtonProps) => {
   return (
     <div
       className="border-2 p-2 rounded-xl border-neutral w-full flex items-center justify-center gap-1 
-                hover:bg-neutral-200 active:scale-95 active:bg-neutral-300 transition-all duration-150"
+            hover:bg-neutral-200 active:scale-95 active:bg-neutral-300 transition-all duration-150"
     >
       <img src={image} className="bg-cover h-8 w-8" alt="Imagem do google" />
       <span>{title}</span>

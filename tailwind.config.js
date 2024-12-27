@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+import tailwindcssMotion from "tailwindcss-motion"; // Usando import
+
 export default {
-  content: ["./app/src/**/*.{js,ts,jsx,tsx}",],
+  content: ["./app/src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -11,6 +13,5 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-motion')],
-}
-
+  plugins: [tailwindcssMotion], // Usando a variável do import
+};
