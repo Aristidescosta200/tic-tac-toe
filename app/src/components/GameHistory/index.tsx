@@ -1,23 +1,32 @@
 import { Player, PlayerHistoric } from "@/src/types";
 import React from "react";
+import { ListPlayerHistoric } from "../ListPlayerHistoric";
+import { useNavigate } from "react-router";
 
 interface ICardGameProps {
   title: string;
   emptyMessage?: string;
   data: PlayerHistoric[] | Player[];
+  to: string;
 }
 
 export const CardGame = ({
   title,
   emptyMessage = "Jogue um jogo",
   data,
+  to,
 }: ICardGameProps) => {
+  const navigate = useNavigate();
   const isPlayerScore = data.every((playerHistoric) => {
     return "place" in playerHistoric;
   });
 
+  const handleClickInCard = () => {
+    navigate(to);
+  };
+
   return (
-    <div className="w-full flex flex-col gap-3">
+    <div className="w-full flex flex-col gap-3" onClick={handleClickInCard}>
       <h3>{title}</h3>
       {data.length === 0 ? (
         <div className="h-24 rounded-md w-full flex flex-col p-5 items-center justify-center bg-neutral">
@@ -54,29 +63,6 @@ const ListPlayerScore: React.FC<IListPlayerScoreProps> = ({ data }) => {
           <span>{playerScore.name}</span>
         </div>
         <p className="text-yellow">{playerScore.score}</p>
-      </li>
-    );
-  });
-};
-
-interface IListPlayerHistoricProps {
-  data: PlayerHistoric[];
-}
-
-const ListPlayerHistoric: React.FC<IListPlayerHistoricProps> = ({ data }) => {
-  return data.map((playerScore, index) => {
-    return (
-      <li key={index} className="flex mb-1 items-center justify-between">
-        <div>
-          <p className="font-semibold">{playerScore.name}</p>
-          <span className="text-darkText">{playerScore.data}</span>
-        </div>
-        <p
-          data-state={playerScore.state}
-          className="font-bold data-[state=WON]:text-success data-[state=LOST]:text-error data-[state=DRAW]:text-darkText"
-        >
-          {playerScore.state}
-        </p>
       </li>
     );
   });

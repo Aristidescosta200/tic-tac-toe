@@ -1,4 +1,4 @@
-import { CardGame } from "@/src/components";
+import { AppBar, CardGame } from "@/src/components";
 import { PLAYER_HISTORIC, PLAYER_SCORE } from "@/src/utils/constants";
 
 export const Home = () => {
@@ -24,13 +24,21 @@ export const Home = () => {
         </div>
       </div>
       <main className="p-5 w-full flex flex-col gap-5">
-        <CardGame title="Histórico do jogo" data={PLAYER_HISTORIC} />
         <CardGame
+          to="/history"
+          title="Histórico do jogo"
+          data={PLAYER_HISTORIC}
+        />
+        <CardGame
+          to="/scoreboard"
           title="Placar"
           emptyMessage="Comecem a jogar, pessoal."
           data={PLAYER_SCORE}
         />
       </main>
+      <footer>
+        <AppBar />
+      </footer>
     </header>
   );
 };

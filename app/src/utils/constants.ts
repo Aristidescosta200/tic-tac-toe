@@ -74,3 +74,9 @@ export const PLAYER_SCORE: Player[] = [
     score: 90,
   },
 ];
+
+export const ICONS = [
+  { name: "MdHomeFilled", label: "Home", route: "/home" },
+  { name: "MdOutlineGames", label: "Games", route: "/players" },
+  { name: "MdOutlinePeopleAlt", label: "Friends", route: "/friends" },
+];
