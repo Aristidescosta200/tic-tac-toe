@@ -6,6 +6,8 @@ export default {
       colors: {
         text: "var(--color-text)",
         background: "var(--color-background)",
+        primary: "var(--color-primary)",
+        neutral: "var(--color-neutral)",
       },
     },
   },

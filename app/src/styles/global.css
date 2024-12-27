@@ -5,6 +5,8 @@
 :root {
     --color-background: #ffffff;
     --color-text: #000000;
+    --color-primary: #46A3FF;
+    --color-neutral: #E3E3E3;
 }
 
 * {
