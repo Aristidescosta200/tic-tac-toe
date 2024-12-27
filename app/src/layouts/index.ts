@@ -1,1 +1,1 @@
-export * from "./BaseCenterLayout/index"
+export * from "./BaseCenterLayout/index";
