@@ -23,7 +23,7 @@ export default [
       "no-var": "error", // Incentiva o uso de let/const em vez de var
       "prefer-const": "warn", // Sugere const para variáveis não reassinadas
       "no-debugger": "warn", // Evita deixar o debugger no código
-      "arrow-body-style": ["warn", "as-needed"], // Usa corpo de arrow functions apenas quando necessário
+      //"arrow-body-style": ["warn", "as-needed"], // Usa corpo de arrow functions apenas quando necessário
     },
   },
 ];

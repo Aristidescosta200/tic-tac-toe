@@ -25,16 +25,11 @@ export const Home = () => {
       </div>
       <main className="p-5 w-full flex flex-col gap-5">
         <CardGame
-          to="/history"
+          to="/game-history"
           title="Histórico do jogo"
           data={PLAYER_HISTORIC}
         />
-        <CardGame
-          to="/scoreboard"
-          title="Placar"
-          emptyMessage="Comecem a jogar, pessoal."
-          data={PLAYER_SCORE}
-        />
+        <CardGame to="/scoreboard" title="Placar" data={PLAYER_SCORE} />
       </main>
       <footer>
         <AppBar />

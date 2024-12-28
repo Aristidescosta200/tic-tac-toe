@@ -1,3 +1,5 @@
+export * from "./ListPlayerHistoric";
+export * from "./ListPlayerScore";
 export * from "./GameHistory";
-export * from "./Steps";
 export * from "./AppBar";
+export * from "./Steps";
