@@ -28,6 +28,8 @@
       "@screens/*": ["./app/src/screens/*"],
       "@hooks/*": ["./app/src/hooks/*"],
       "@database/*": ["./app/src/database/*"],
+      "@context/*": ["./app/src/context/*"],
+      "@providers/*": ["./app/src/providers/*"],
       "@types/*": ["./app/src/types/*"],
       "@routes/*": ["./app/src/routes/*"],
       "@repositories/*": ["./app/src/repositories/*"],

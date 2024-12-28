@@ -20,7 +20,7 @@ export const HeaderLayout = ({
   };
 
   return (
-    <header className="p-5 flex flex-col gap-5">
+    <header className="fixed bg-background left-0 right-0 top-0 p-5 flex flex-col gap-5">
       <div className="flex items-center justify-start gap-1">
         {showIcon && (
           <TicTacToeIcon

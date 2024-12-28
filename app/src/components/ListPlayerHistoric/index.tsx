@@ -1,7 +1,7 @@
-import { PlayerHistoric } from '@/src/types';
+import { IHistory } from '@/src/types';
 
 interface IListPlayerHistoricProps {
-  data: PlayerHistoric[];
+  data: IHistory[];
 }
 
 export const ListPlayerHistoric = ({ data }: IListPlayerHistoricProps) => {
@@ -15,14 +15,14 @@ export const ListPlayerHistoric = ({ data }: IListPlayerHistoricProps) => {
       return (
         <li key={index} className="flex mb-1 items-center justify-between">
           <div>
-            <p className="font-semibold">{playerScore.name}</p>
-            <span className="text-darkText">{playerScore.data}</span>
+            <p className="font-semibold">{playerScore.playerFaced}</p>
+            <span className="text-darkText">{playerScore.date}</span>
           </div>
           <p
-            data-state={playerScore.state}
-            className="font-bold data-[state=WON]:text-success data-[state=LOST]:text-error data-[state=DRAW]:text-darkText"
+            data-state={playerScore.result}
+            className="font-bold data-[state=GANHO]:text-success data-[state=PERDIDO]:text-error data-[state=EMPATADO]:text-darkText"
           >
-            {playerScore.state}
+            {playerScore.result}
           </p>
         </li>
       );

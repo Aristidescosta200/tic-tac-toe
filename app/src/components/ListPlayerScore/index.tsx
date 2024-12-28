@@ -1,8 +1,9 @@
-import { Player } from '@/src/types';
+import { TicTacToeIcon } from '@/react-icons';
+import { Score } from '@/src/types';
 import React from 'react';
 
 interface IListPlayerScoreProps {
-  data: Player[];
+  data: Score[];
 }
 
 export const ListPlayerScore: React.FC<IListPlayerScoreProps> = ({ data }) => {
@@ -12,17 +13,19 @@ export const ListPlayerScore: React.FC<IListPlayerScoreProps> = ({ data }) => {
       <span className="text-darkText">Jogue um jogo</span>
     </div>
   ) : (
-    data.map((playerScore) => (
-      <li
-        key={playerScore.place}
-        className="flex mb-1 items-center justify-between"
-      >
+    data.map((score, index) => (
+      <li key={index} className="flex mb-1 items-center justify-between">
         <div className="flex items-center gap-2">
-          <img src="/star.png" alt="imagem de uma estrela" />
-          <span>{playerScore.place}. </span>
-          <span>{playerScore.name}</span>
+          {/*           <img src="/star.png" className='h-8 w-8' alt="imagem de uma estrela" /> */}
+          <TicTacToeIcon
+            name="MdOutlineStarPurple500"
+            package="materialdesignicons"
+            color="#ffb048"
+          />
+          <span className="text-xl font-semibold">{score.position}. </span>
+          <span className="text-xl font-semibold">{score.playerName}</span>
         </div>
-        <p className="text-yellow">{playerScore.score}</p>
+        <p className="text-xl font-semibold text-yellow">{score.point}</p>
       </li>
     ))
   );

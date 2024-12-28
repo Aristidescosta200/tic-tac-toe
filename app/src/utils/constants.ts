@@ -1,4 +1,4 @@
-import { ONLINE_STATE, Player, PLAYER_STATE, PlayerHistoric } from '../types';
+import { IHistory, ONLINE_STATE, PLAYER_STATE, Score } from '../types';
 
 export const ONBOARDIG_MESSAGES = [
   {
@@ -19,59 +19,175 @@ export const ONBOARDIG_MESSAGES = [
   },
 ];
 
-export const PLAYER_HISTORIC: PlayerHistoric[] = [
+export const HISTORIC: IHistory[] = [
   {
-    data: '05.25.2022.',
-    name: 'Aristides da Costa',
-    state: PLAYER_STATE.WON,
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.WON,
   },
   {
-    data: '05.25.2022.',
-    name: 'Aristides da Costa',
-    state: PLAYER_STATE.LOST,
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.LOST,
   },
   {
-    data: '05.25.2022.',
-    name: 'Aristides da Costa',
-    state: PLAYER_STATE.WON,
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.WON,
   },
   {
-    data: '05.25.2022.',
-    name: 'Aristides da Costa',
-    state: PLAYER_STATE.LOST,
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.LOST,
   },
   {
-    data: '05.25.2022.',
-    name: 'Aristides da Costa',
-    state: PLAYER_STATE.DRAW,
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.DRAW,
+  },
+  {
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.WON,
+  },
+  {
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.LOST,
+  },
+  {
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.WON,
+  },
+  {
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.LOST,
+  },
+  {
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.DRAW,
+  },
+  {
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.WON,
+  },
+
+  {
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.WON,
+  },
+  {
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.LOST,
+  },
+  {
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.DRAW,
+  },
+  {
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.WON,
+  },
+  {
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.LOST,
+  },
+  {
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.WON,
+  },
+  {
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.LOST,
+  },
+  {
+    date: '05.25.2022.',
+    playerFaced: 'Elias Tchissingui',
+    result: PLAYER_STATE.DRAW,
   },
 ];
 
-export const PLAYER_SCORE: Player[] = [
+export const SCORE: Score[] = [
   {
-    name: 'Aristides da Costa',
-    place: 1,
-    score: 130,
+    playerName: 'Aristides da Costa',
+    position: 1,
+    point: 130,
   },
   {
-    name: 'Aristides da Costa',
-    place: 2,
-    score: 120,
+    playerName: 'Aristides da Costa',
+    position: 2,
+    point: 120,
   },
   {
-    name: 'Aristides da Costa',
-    place: 3,
-    score: 110,
+    playerName: 'Aristides da Costa',
+    position: 3,
+    point: 110,
   },
   {
-    name: 'Aristides da Costa',
-    place: 4,
-    score: 100,
+    playerName: 'Aristides da Costa',
+    position: 4,
+    point: 100,
   },
   {
-    name: 'Aristides da Costa',
-    place: 5,
-    score: 90,
+    playerName: 'Aristides da Costa',
+    position: 5,
+    point: 90,
+  },
+  {
+    playerName: 'Aristides da Costa',
+    position: 6,
+    point: 80,
+  },
+  {
+    playerName: 'Aristides da Costa',
+    position: 7,
+    point: 70,
+  },
+  {
+    playerName: 'Aristides da Costa',
+    position: 8,
+    point: 65,
+  },
+  {
+    playerName: 'Aristides da Costa',
+    position: 9,
+    point: 60,
+  },
+  {
+    playerName: 'Aristides da Costa',
+    position: 10,
+    point: 55,
+  },
+  {
+    playerName: 'Aristides da Costa',
+    position: 11,
+    point: 50,
+  },
+  {
+    playerName: 'Aristides da Costa',
+    position: 12,
+    point: 45,
+  },
+  {
+    playerName: 'Aristides da Costa',
+    position: 13,
+    point: 30,
+  },
+  {
+    playerName: 'Aristides da Costa',
+    position: 14,
+    point: 25,
   },
 ];
 
