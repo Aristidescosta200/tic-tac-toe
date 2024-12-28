@@ -2,7 +2,7 @@ import { ModalPlayerInfo } from '@/src/components';
 import { HeaderLayout } from '@/src/layouts';
 import { ONLINE_STATE } from '@/src/types';
 import { ONLINE_PLAYERS } from '@/src/utils/constants';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export const OnlinePlayers = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,9 +24,12 @@ export const OnlinePlayers = () => {
                 <li
                   key={index}
                   className="flex items-center justify-between mb-2"
+                  onClick={handleToggleModal}
                 >
                   <div className="flex flex-col items-start">
-                    <h3 className="text-xl">{onlinePlayer.name}</h3>
+                    <h3 className="text-xl line-clamp-1">
+                      {onlinePlayer.name}
+                    </h3>
                     <div className="flex items-center gap-1">
                       <div
                         data-state={onlinePlayer.status}
@@ -36,7 +39,7 @@ export const OnlinePlayers = () => {
                     </div>
                   </div>
                   <ButtonInvite
-                    onInvitePlayer={handleToggleModal}
+                    /* onInvitePlayer={handleToggleModal} */
                     isDisabled={onlinePlayer.status === ONLINE_STATE.OFFLINE}
                   />
                 </li>
@@ -61,18 +64,50 @@ function EmpetyMessage() {
 
 interface IButtonInviteProps {
   isDisabled: boolean;
-  onInvitePlayer: () => void;
+  /* onInvitePlayer: () => void; */
 }
 
-function ButtonInvite({ isDisabled, onInvitePlayer }: IButtonInviteProps) {
+function ButtonInvite({ isDisabled }: IButtonInviteProps) {
+  const [isLoading, setIsLoading] = useState(false);
+  const handleInvitePlayer = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+  ) => {
+    e.stopPropagation();
+    /* onInvitePlayer() */
+    setIsLoading(!isLoading);
+  };
+
   return (
     <button
-      onClick={onInvitePlayer}
+      onClick={handleInvitePlayer}
       data-disabled={isDisabled}
       disabled={isDisabled}
-      className="disabled:bg-neutral disabled:text-darkText border-2 data-[disabled=false]:border-text  px-1 py-2 rounded-md hover:bg-neutral-200 active:scale-95 active:bg-neutral-300 transition-all duration-150"
+      data-loading={isLoading}
+      className="disabled:bg-neutral disabled:text-darkText border-2 data-[disabled=false]:border-text flex items-center px-1 py-2 rounded-md data-[loading=true]:motion-preset-shrink motion-duration-700"
     >
-      Convidar
+      {isLoading && (
+        <svg
+          className="motion-preset-stretch animate-spin h-4 w-4 mr-2"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            className="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            strokeWidth="4"
+          ></circle>
+          <path
+            className="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          ></path>
+        </svg>
+      )}
+      {isLoading ? 'Convidando' : 'Convidar'}
     </button>
   );
 }

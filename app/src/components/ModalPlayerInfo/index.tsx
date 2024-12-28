@@ -8,7 +8,10 @@ export const ModalPlayerInfo = ({ onClose }: IModalPlayerInfoProps) => {
       onClick={onClose}
       className="absolute top-0 left-0 right-0 bottom-0 bg-[#00000043] flex flex-col justify-end"
     >
-      <div className="h-72 rounded-t-4xl w-full bg-background z-10 flex flex-col items-center p-5">
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="motion-preset-slide-up motion-duration-700 h-72 rounded-t-4xl w-full bg-background z-10 flex flex-col items-center p-5"
+      >
         <h3 className="font-semibold text-xl">Arisitdes da Costa</h3>
         <div className="flex items-center gap-1">
           <div
