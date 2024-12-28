@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
 type OnboardingStore = {
   currentStep: number;
@@ -18,10 +18,10 @@ type OnboardingActions = {
 
 const INITIAL_ONBOARDING_STORE: OnboardingStore = {
   currentStep: 0,
-  stepDescription: "",
-  stepTitle: "",
+  stepDescription: '',
+  stepTitle: '',
   totalSteps: 3,
-  imagePath: "",
+  imagePath: '',
 };
 
 export const useOnboarding = create<OnboardingStore & OnboardingActions>()(

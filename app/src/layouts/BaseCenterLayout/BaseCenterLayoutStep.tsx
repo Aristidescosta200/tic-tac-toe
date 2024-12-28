@@ -1,5 +1,5 @@
-import { useOnboarding } from "@/src/hooks";
-import { Steps } from "@/src/components";
+import { useOnboarding } from '@/src/hooks';
+import { Steps } from '@/src/components';
 
 export const BaseCenterLayoutStep = () => {
   const currentStep = useOnboarding((state) => state.currentStep);

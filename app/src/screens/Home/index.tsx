@@ -1,5 +1,5 @@
-import { AppBar, CardGame } from "@/src/components";
-import { PLAYER_HISTORIC, PLAYER_SCORE } from "@/src/utils/constants";
+import { PLAYER_HISTORIC, PLAYER_SCORE } from '@/src/utils/constants';
+import { CardGame } from '@/src/components';
 
 export const Home = () => {
   return (
@@ -31,9 +31,6 @@ export const Home = () => {
         />
         <CardGame to="/scoreboard" title="Placar" data={PLAYER_SCORE} />
       </main>
-      <footer>
-        <AppBar />
-      </footer>
     </header>
   );
 };

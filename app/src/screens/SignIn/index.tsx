@@ -1,19 +1,19 @@
-import { BaseCenterLayout } from "@/src/layouts";
-import { useNavigate } from "react-router";
+import { BaseCenterLayout } from '@/src/layouts';
+import { useNavigate } from 'react-router';
 
 export const SignIn = () => {
   const navigate = useNavigate();
 
   const onGoToHome = () => {
-    navigate("/home");
+    navigate('/home');
   };
 
   return (
     <BaseCenterLayout.Root>
-      <BaseCenterLayout.Image imagePath={"Logo.png"} />
+      <BaseCenterLayout.Image imagePath={'Logo.png'} />
       <BaseCenterLayout.Description
-        title={"Bem-vindo"}
-        description={"Faça login para continuar."}
+        title={'Bem-vindo'}
+        description={'Faça login para continuar.'}
       />
       <BaseCenterLayout.Content>
         <div className="flex flex-col w-full gap-3">

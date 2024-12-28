@@ -1,5 +1,5 @@
-import { ListPlayerScore } from "@/src/components";
-import { HeaderLayout } from "@/src/layouts";
+import { ListPlayerScore } from '@/src/components';
+import { HeaderLayout } from '@/src/layouts';
 
 export const GameHistoryScreen = () => {
   return (

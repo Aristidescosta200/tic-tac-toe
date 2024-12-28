@@ -1,5 +1,5 @@
-import { Player } from "@/src/types";
-import React from "react";
+import { Player } from '@/src/types';
+import React from 'react';
 
 interface IListPlayerScoreProps {
   data: Player[];

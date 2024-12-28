@@ -1,5 +1,5 @@
-import { useOnboarding } from "@/src/hooks";
-import { Step } from "./Step";
+import { useOnboarding } from '@/src/hooks';
+import { Step } from './Step';
 
 export const Steps = () => {
   const totalSteps = useOnboarding((state) => state.totalSteps);

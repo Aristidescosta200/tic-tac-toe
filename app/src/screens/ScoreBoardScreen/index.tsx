@@ -1,5 +1,5 @@
-import { ListPlayerHistoric } from "@/src/components";
-import { HeaderLayout } from "@/src/layouts";
+import { ListPlayerHistoric } from '@/src/components';
+import { HeaderLayout } from '@/src/layouts';
 
 export const ScoreBoardScreen = () => {
   return (

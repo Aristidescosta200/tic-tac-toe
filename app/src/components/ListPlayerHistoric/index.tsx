@@ -1,4 +1,4 @@
-import { PlayerHistoric } from "@/src/types";
+import { PlayerHistoric } from '@/src/types';
 
 interface IListPlayerHistoricProps {
   data: PlayerHistoric[];

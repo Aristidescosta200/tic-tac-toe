@@ -1,8 +1,8 @@
-import { useOnboarding } from "@/src/hooks";
-import { BaseCenterLayout } from "@/src/layouts";
-import { ONBOARDIG_MESSAGES } from "@/src/utils/constants";
-import { useEffect } from "react";
-import { useNavigate } from "react-router";
+import { useOnboarding } from '@/src/hooks';
+import { BaseCenterLayout } from '@/src/layouts';
+import { ONBOARDIG_MESSAGES } from '@/src/utils/constants';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router';
 
 export const OnboardingScreen = () => {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ export const OnboardingScreen = () => {
 
   useEffect(() => {
     if (currentStep === totalSteps) {
-      navigate("/sign-in");
+      navigate('/sign-in');
     } else {
       setStepTitle(ONBOARDIG_MESSAGES[currentStep].title);
       setStepDescription(ONBOARDIG_MESSAGES[currentStep].description);

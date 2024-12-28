@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, RouterProvider } from 'react-router';
 import {
   SplashScreen,
   OnboardingScreen,
@@ -6,38 +6,53 @@ import {
   Home,
   GameHistoryScreen,
   ScoreBoardScreen,
-} from "@screens/index";
+  OnlinePlayers,
+} from '@screens/index';
+import { BaseLayoutScreen } from '../layouts';
 
 export default function RoutesConfig() {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: '/',
       element: <SplashScreen />,
       errorElement: <h1>Deu um erro inesperado.</h1>,
     },
     {
-      path: "/onboarding-1",
+      path: '/onboarding-1',
       element: <OnboardingScreen />,
       errorElement: <h1>Deu um erro inesperado.</h1>,
     },
     {
-      path: "/sign-in",
+      path: '/sign-in',
       element: <SignIn />,
       errorElement: <h1>Deu um erro inesperado.</h1>,
     },
     {
-      path: "/home",
-      element: <Home />,
+      path: '/home',
+      element: (
+        <BaseLayoutScreen>
+          <Home />
+        </BaseLayoutScreen>
+      ),
       errorElement: <h1>Deu um erro inesperado.</h1>,
     },
     {
-      path: "/game-history",
+      path: '/game-history',
       element: <GameHistoryScreen />,
       errorElement: <h1>Deu um erro inesperado.</h1>,
     },
     {
-      path: "/scoreboard",
+      path: '/scoreboard',
       element: <ScoreBoardScreen />,
+      errorElement: <h1>Deu um erro inesperado.</h1>,
+    },
+    {
+      path: '/players',
+      element: (
+        <BaseLayoutScreen>
+          <OnlinePlayers />
+        </BaseLayoutScreen>
+      ),
       errorElement: <h1>Deu um erro inesperado.</h1>,
     },
   ]);

@@ -1,15 +1,22 @@
-import { TicTacToeIcon } from "@/react-icons";
-import { useNavigate } from "react-router";
+import { TicTacToeIcon } from '@/react-icons';
+import { useNavigate } from 'react-router';
 
 interface IHeaderLayoutProps {
   title: string;
   showIcon?: boolean;
+  showSearchComponent?: boolean;
+  searchComponentIsDate?: boolean;
 }
 
-export const HeaderLayout = ({ title, showIcon }: IHeaderLayoutProps) => {
+export const HeaderLayout = ({
+  title,
+  showIcon,
+  showSearchComponent = true,
+  searchComponentIsDate = false,
+}: IHeaderLayoutProps) => {
   const navigate = useNavigate();
   const handleGoBack = () => {
-    navigate("/home");
+    navigate('/home');
   };
 
   return (
@@ -25,7 +32,17 @@ export const HeaderLayout = ({ title, showIcon }: IHeaderLayoutProps) => {
         )}
         <h1 className="text-3xl font-bold">{title}</h1>
       </div>
-      <input type="date" name="" id="" className="w-full border-2 p-2" />
+      {showSearchComponent && (
+        <input
+          type={searchComponentIsDate ? 'date' : 'search'}
+          placeholder={
+            searchComponentIsDate ? undefined : 'Pesquisar jogadores'
+          }
+          name=""
+          id=""
+          className="w-full border-2 p-2"
+        />
+      )}
     </header>
   );
 };

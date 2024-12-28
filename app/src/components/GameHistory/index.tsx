@@ -1,8 +1,8 @@
-import { useNavigate } from "react-router";
+import { useNavigate } from 'react-router';
 
-import { ListPlayerHistoric } from "../ListPlayerHistoric";
-import { Player, PlayerHistoric } from "@/src/types";
-import { ListPlayerScore } from "../ListPlayerScore";
+import { ListPlayerHistoric } from '../ListPlayerHistoric';
+import { Player, PlayerHistoric } from '@/src/types';
+import { ListPlayerScore } from '../ListPlayerScore';
 
 interface ICardGameProps {
   title: string;
@@ -13,7 +13,7 @@ interface ICardGameProps {
 export const CardGame = ({ title, data, to }: ICardGameProps) => {
   const navigate = useNavigate();
   const isPlayerScore = data.every((playerHistoric) => {
-    return "place" in playerHistoric;
+    return 'place' in playerHistoric;
   });
 
   const handleClickInCard = () => {
