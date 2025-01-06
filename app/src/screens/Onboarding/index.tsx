@@ -1,4 +1,4 @@
-import { useOnboarding } from '@/src/hooks';
+import { useOnboarding, usePresentation } from '@/src/hooks';
 import { BaseCenterLayout } from '@/src/layouts';
 import { ONBOARDIG_MESSAGES } from '@/src/utils/constants';
 import { useEffect } from 'react';
@@ -12,12 +12,20 @@ export const OnboardingScreen = () => {
   const currentStep = useOnboarding((state) => state.currentStep);
   const imagePath = useOnboarding((state) => state.imagePath);
   const stepDescription = useOnboarding((state) => state.stepDescription);
+  const { theGameWasIntroduced, onGameWasIntroduced } = usePresentation();
   const setStepTitle = useOnboarding((state) => state.setStepTitle);
   const setStepDescription = useOnboarding((state) => state.setStepDescription);
   const setStepImage = useOnboarding((state) => state.setStepImage);
 
   useEffect(() => {
+    if (theGameWasIntroduced) {
+      navigate('/sign-in');
+    }
+  }, []);
+
+  useEffect(() => {
     if (currentStep === totalSteps) {
+      onGameWasIntroduced();
       navigate('/sign-in');
     } else {
       setStepTitle(ONBOARDIG_MESSAGES[currentStep].title);
