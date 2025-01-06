@@ -12,7 +12,7 @@ export const InvitationNotification = () => {
 
   return (
     <div
-      hidden={notifying}
+      hidden={!notifying}
       className="absolute right-0 left-32 shadow-md z-50 top-96"
     >
       <div className="p-1 bg-background rounded-tl-md">
