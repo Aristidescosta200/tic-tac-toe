@@ -39,7 +39,7 @@ interface IIconButtonProps {
   onClick: () => void;
 }
 
-const IconButton = ({ title, image, onClick }: IIconButtonProps) => {
+export const IconButton = ({ title, image, onClick }: IIconButtonProps) => {
   return (
     <div
       onClick={onClick}

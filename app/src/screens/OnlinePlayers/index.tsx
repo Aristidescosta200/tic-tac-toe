@@ -14,7 +14,7 @@ export const OnlinePlayers = () => {
   return (
     <>
       <HeaderLayout title="Jogadores on-line" />
-      <main className="w-full h-full p-5">
+      <main className="w-full h-full p-5 mt-32">
         {ONLINE_PLAYERS.length === 0 ? (
           <EmpetyMessage />
         ) : (
